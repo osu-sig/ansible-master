@@ -1,0 +1,11 @@
+---
+- name: add ntp server to ntp.conf
+  lineinfile:
+    line="server {{ osu_ntp }} iburst"
+    dest=/etc/ntp.conf
+    insertafter="# Please consider"
+    state=present
+
+- name: set time zone
+  command: timedatectl set-timezone {{ time_zone }}
+  notify: restart ntp

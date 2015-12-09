@@ -1,0 +1,6 @@
+---
+- name: restart resolvconf
+  service: name=resolvconf state=restarted
+
+- name: restart NetworkManager
+  service: name=network.service state=restarted

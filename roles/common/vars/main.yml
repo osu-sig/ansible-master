@@ -1,0 +1,5 @@
+---
+osu_ntp: time.oregonstate.edu
+time_zone: America/Los_Angeles
+osu_dns1: 128.193.15.12
+osu_dns2: 123.193.15.12

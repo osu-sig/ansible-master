@@ -1,0 +1,6 @@
+---
+- include: install_yum_pkgs.yml
+  when: ansible_pkg_mgr == 'yum'
+
+#- include: conf_dns.yml
+- include: conf_ntp.yml
