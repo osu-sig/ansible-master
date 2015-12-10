@@ -1,3 +1,1 @@
 # ansible-master
-
-FOOBAR
