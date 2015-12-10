@@ -2,5 +2,9 @@
 - include: install_yum_pkgs.yml
   when: ansible_pkg_mgr == 'yum'
 
+# broken, only works for .deb / resolvconf based system
 #- include: conf_dns.yml
 - include: conf_ntp.yml
+
+- include: install_apt_pkgs.yml
+  when: ansible_pkg_mgr == 'apt'
