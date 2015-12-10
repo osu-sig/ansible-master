@@ -1,3 +1,1 @@
 # development inventory
-
-localhost ansible_connection=local
