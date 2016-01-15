@@ -2,6 +2,7 @@
 - name: install common packages
   yum: name={{item}} state=present update_cache=yes
   with_items:
+    - libselinux-python
     - sudo
     - ntp
     - ntpdate
