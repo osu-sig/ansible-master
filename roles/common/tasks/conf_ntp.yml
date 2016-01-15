@@ -1,4 +1,5 @@
 ---
+# FIXME: not debian safe
 - name: add ntp server to ntp.conf
   lineinfile:
     line="server {{ osu_ntp }} iburst"
@@ -6,6 +7,3 @@
     insertafter="# Please consider"
     state=present
 
-- name: set time zone
-  command: timedatectl set-timezone {{ time_zone }}
-  notify: restart ntp

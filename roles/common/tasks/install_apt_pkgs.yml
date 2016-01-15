@@ -5,4 +5,9 @@
     - sudo
     - ntp
     - ntpdate
-    - resolvconf
+    - htop
+    - less
+    - lsof
+    - strace
+    - tcpdump
+    - vim

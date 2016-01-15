@@ -1,7 +1,5 @@
 ---
 - hosts: all
   gather_facts: yes
-  become: true
-  become_method: sudo
   roles:
     - common
