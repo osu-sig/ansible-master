@@ -1,9 +1,8 @@
 ---
-# FIXME: not debian safe
-- name: add ntp server to ntp.conf
-  lineinfile:
-    line="server {{ osu_ntp }} iburst"
-    dest=/etc/ntp.conf
-    insertafter="# Please consider"
-    state=present
+- name: enable ntpd
+  service: name=ntpd state=running enabled=yes
 
+- name: configure ntpd
+  template: src=templates/ntp.conf.j2 dest=/etc/ntp.conf owner=root group=root mode=0644
+  notify:
+    - restart ntpd

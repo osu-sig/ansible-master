@@ -1,5 +1,7 @@
 ---
-osu_ntp: time.oregonstate.edu
+timeservers:
+  - time.oregonstate.edu
+
 nameservers:
   - 128.193.15.12
   - 128.193.15.13
