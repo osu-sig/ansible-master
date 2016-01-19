@@ -1,7 +1,2 @@
 ---
-- name: configure dns on NetworkManager
-  nmcli:
-    dns4= "{{ osu_dns1 }} {{ osu_dns2 }}"
-    conn_name= "{{ ansible_default_ipv4.alias }}"
-    state=present
-  notify: restart NetworkManager
+- template: src=templates/resolv.conf.j2 dest=/etc/resolv.conf owner=root group=root mode=0644

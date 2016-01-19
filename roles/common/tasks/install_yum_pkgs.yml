@@ -1,9 +1,21 @@
 ---
-- name: install common pkgs
+- name: install common packages
   yum: name={{item}} state=present update_cache=yes
   with_items:
+    - libselinux-python
     - sudo
     - ntp
     - ntpdate
-    - nmcli
-#    - resolvconf
+    - crontabs
+    - strace
+    - less
+    - vim-enhanced
+    - lsof
+    - tcpdump
+
+- name: remove awful packages
+  yum: name={{item}} state=absent update_cache=yes
+  with_items:
+    - NetworkManager
+    - cups
+    - iw

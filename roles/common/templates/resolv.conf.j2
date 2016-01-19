@@ -1,0 +1,8 @@
+# {{ ansible_managed }}
+
+search {{ search_domains|join(' ') }}
+{% for ns in nameservers %}
+nameserver {{ ns }}
+{% endfor %}
+
+options timeout:{{ lookup_timeout }}
