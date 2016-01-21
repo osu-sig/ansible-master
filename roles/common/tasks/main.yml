@@ -1,4 +1,7 @@
 ---
+- include: install_epel_repo.yml
+  when: ansible_pkg_mgr == 'yum'
+
 - include: install_yum_pkgs.yml
   when: ansible_pkg_mgr == 'yum'
 
