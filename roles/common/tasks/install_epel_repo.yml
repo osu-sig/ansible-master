@@ -1,5 +1,16 @@
-- name: Add EPEL repository
-  yumrepo:
-    name: epel
-    description: EPEL YUM repo
-    baseurl: http://download.fedoraproject.org/pub/epel/{{ ansible_distribution_major_version }}/{{ ansible_base_architecture }}
+---
+# this is sorta hacky (and not idempotent.) yumrepo module is released in Ansible v2.1
+
+- name: bootstrap epel-release install
+  yum: 
+    name: "{{ epel_repo_url }}"
+    state: present
+  register: result
+  until: '"failed" not in result'
+  retries: 5
+  delay: 10
+
+- name: Add EPEL GPG key
+  rpm_key:
+    key: "{{ epel_gpg_url }}"
+    state: present
