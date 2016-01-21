@@ -1,7 +1,7 @@
 ---
 # this is sorta hacky (and not idempotent.) yumrepo module is released in Ansible v2.1
 
-- name: bootstrap epel-release install
+- name: install epel repository
   yum: 
     name: "{{ epel_repo_url }}"
     state: present
