@@ -10,4 +10,4 @@
 
 - include: conf_dns.yml
 - include: conf_ntp.yml
-
+- include: conf_selinux.yml
