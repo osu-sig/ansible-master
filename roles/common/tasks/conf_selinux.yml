@@ -1,3 +1,2 @@
 ---
 - selinux: state=permissive policy=targeted
-  when: ansible_os_family == "RedHat"
