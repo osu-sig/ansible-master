@@ -8,6 +8,8 @@
 - include: install_apt_pkgs.yml
   when: ansible_pkg_mgr == 'apt'
 
+- include: conf_selinux.yml
+  when: ansible_os_family == 'RedHat'
+
 - include: conf_dns.yml
 - include: conf_ntp.yml
-
