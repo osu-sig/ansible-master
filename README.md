@@ -1,6 +1,6 @@
 # ansible-master
 
-Collection of Ansible playbooks, and scripts for bootstrapping a deployment host
+Collection of Ansible playbooks, along with scripts for bootstrapping a deployment host and adding roles
 
 Ansible v2.0.0.2
 
