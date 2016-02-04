@@ -4,4 +4,6 @@
   become: yes
   become_method: sudo
   roles:
-    - common
+    - ansible-common-apt
+    - ansible-common-yum
+    - ansible-disable-selinux
