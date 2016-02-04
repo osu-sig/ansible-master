@@ -1,6 +1,14 @@
 # ansible-master
 
+Collection of Ansible playbooks, along with scripts for bootstrapping a deployment host and adding roles
+
 Ansible v2.0.0.2
+
+Instructions:
+
+ * add roles to requirements.yml
+ * populate roles directory with role-it-up.sh
+ * populate inventory files
 
 To test with a local vm, add your host to inventory/dev, then:
 
