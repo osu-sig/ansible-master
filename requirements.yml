@@ -1,0 +1,25 @@
+---
+- src: git+https://github.com/osu-sig/ansible-common-apt
+  name: common-apt
+
+- src: git+https://github.com/osu-sig/ansible-common-yum
+  name: common-yum
+
+- src: git+https://github.com/osu-sig/ansible-postfix-client
+  name: postfix-client
+
+- src: git+https://github.com/osu-sig/ansible-conf-dns
+  name: conf-dns
+
+- src: git+https://github.com/osu-sig/ansible-conf-ntp
+  name: conf-ntp
+
+- src: git+https://github.com/osu-sig/ansible-disable-selinux
+  name: disable-selinux
+
+- src: git+https://github.com/osu-sig/ansible-epel-repository
+  name: epel-repository
+
+- src: git+https://github.com/osu-sig/ansible-splunk
+  name: splunk
+
