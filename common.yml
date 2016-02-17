@@ -7,6 +7,6 @@
     - conf-dns
     - { role: common-apt, when: ansible_os_family == 'Debian' }
     - { role: common-yum, when: ansible_os_family == 'RedHat' }
-    - disable-selinux
+    - { role: disable-selinux, when: ansible_os_family == 'RedHat' }
     - conf-ntp
     - postfix-client
