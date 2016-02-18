@@ -4,9 +4,9 @@
   become: yes
   become_method: sudo
   roles:
-    - disable-selinux
     - conf-dns
-    - conf-ntp
     - { role: common-apt, when: ansible_os_family == 'Debian' }
     - { role: common-yum, when: ansible_os_family == 'RedHat' }
+    - { role: disable-selinux, when: ansible_os_family == 'RedHat' }
+    - conf-ntp
     - postfix-client
