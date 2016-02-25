@@ -1,5 +1,7 @@
 # ansible-master
 
+[![Build Status](https://jenkins.sig.oregonstate.edu/job/lint%20ansible-master/9/badge/icon)](https://jenkins.sig.oregonstate.edu/job/lint%20ansible-master/9/)
+
 Collection of Ansible playbooks, along with scripts for bootstrapping a deployment host and adding roles
 
 Ansible v2.0.0.2
