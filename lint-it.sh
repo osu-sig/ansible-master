@@ -1,4 +1,5 @@
 #!/bin/bash
+# used by jenkins to lint ansible playbooks
 
 echo "=> Linting Ansible Code"
 fail_ansible=0
